@@ -1,4 +1,4 @@
-var url = 'https://www.wolframalpha.com/';
+var url = 'https://www.wolframalpha.com';
 var appid= '6435AA-GV9PA4WPPY';
 var url2 = 'http://api.wolframalpha.com/v2/query?appid='+appid;
 document.addEventListener('DOMContentLoaded', function() {
@@ -24,6 +24,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
   //  var out = document.getElementById('bru');
   //out.innerHTML = bru;
+
+  }, false);
+}, false);
+
+document.addEventListener('DOMContentLoaded', function() {
+  var wolframAlphaButton = document.getElementById('newTab');
+
+
+  wolframAlphaButton.addEventListener('click', function() {
+    var userInput2 = document.getElementById("userInput").value;
+    var output2 = url + '/input/?i=' + userInput2;
+
+    window.open(output2, '_blank');
 
   }, false);
 }, false);
